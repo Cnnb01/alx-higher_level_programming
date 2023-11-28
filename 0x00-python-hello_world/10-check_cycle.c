@@ -11,7 +11,10 @@ listint_t *pslow;
 listint_t *pfast;
 pslow = list;
 pfast = list->next;
-
+if (list == NULL)
+{
+return (0);
+}
 while (pslow != pfast)
 {
 if (pslow == NULL || pfast == NULL || pfast->next == NULL)
