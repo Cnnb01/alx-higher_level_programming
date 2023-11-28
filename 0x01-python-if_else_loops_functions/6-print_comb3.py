@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 for i in range(0, 10):
-    for items in range(i+1, 10):
-        if i != items:
-            print("{}{}".format(i,items), end=", " if i != 8 or items != 9 else "\n")
+    for it in range(i+1, 10):
+        if i != it:
+            print("{}{}".format(i,it) , end=", " if i != 8 or it != 9 else "\n")
