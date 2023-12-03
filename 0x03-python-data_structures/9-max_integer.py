@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 def max_integer(my_list=[]):
+    for nums in my_list:
+        if not isinstance(nums, int):
+            raise TypeError("List must contain only integers")
     max_num = my_list[0]
     if my_list == []:
         return (None)
