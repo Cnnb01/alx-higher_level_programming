@@ -31,3 +31,19 @@ class Rectangle:
                 self.__height = value
         else:
             raise TypeError("height must be an integer")
+
+    def area(self):
+        return (self.__width * self.__height)
+
+    def perimeter(self):
+        if (self.__width == 0 or self.__height == 0):
+            print()
+        return ((self.__width * 2) + (self.__height * 2))
+
+    def __str__(self):
+        count = ""
+        for i in range(self.__height):
+            for j in range(self.__width):
+                count += "#"
+            count += "\n"
+        return count

@@ -31,3 +31,9 @@ class Rectangle:
                 self.__height = value
         else:
             raise TypeError("height must be an integer")
+
+    def area(self):
+        return (self.__width * self.__height)
+
+    def perimeter(self):
+        return ((self.__width * 2) + (self.__height * 2))
