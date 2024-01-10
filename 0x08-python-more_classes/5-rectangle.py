@@ -81,6 +81,8 @@ class Rectangle:
         Returns:
             int: The perimeter of the rectangle.
         """
+        if self.__width == 0 or self.__height == 0:
+            return (0)
         return (self.__width * 2) + (self.__height * 2)
 
     def __str__(self):
@@ -106,7 +108,10 @@ class Rectangle:
 
     def __del__(self):
         """Destructor method to print a farewell message when
+
         a rectangle instance is deleted.
+
+        This method decreases the number of rectangle instances by 1.
         """
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
