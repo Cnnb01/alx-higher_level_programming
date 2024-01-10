@@ -26,11 +26,11 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """Set the width of the rectangle.
+        """
+        Set the width of the rectangle.
 
         Args:
             value (int): The new width value.
-
         Raises:
             ValueError: If the width is less than 0.
             TypeError: If the width is not an integer.
@@ -50,11 +50,11 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        """Set the height of the rectangle.
+        """
+        Set the height of the rectangle.
 
         Args:
             value (int): The new height value.
-
         Raises:
             ValueError: If the height is less than 0.
             TypeError: If the height is not an integer.
@@ -68,15 +68,12 @@ class Rectangle:
             raise TypeError("height must be an integer")
 
     def area(self):
-        """Calculate and return the area of the rectangle.
-
-        Returns:
-            int: The area of the rectangle.
-        """
+        """Calculate and return the area of the rectangle."""
         return self.__width * self.__height
 
     def perimeter(self):
-        """Calculate and return the perimeter of the rectangle.
+        """
+        Calculate and return the perimeter of the rectangle.
 
         Returns:
             int: The perimeter of the rectangle.
@@ -86,7 +83,8 @@ class Rectangle:
         return (self.__width * 2) + (self.__height * 2)
 
     def __str__(self):
-        """Generate a string representation of the rectangle using '#' symbols.
+        """
+        Return a string representation of the rectangle.
 
         Returns:
             str: A string representation of the rectangle.
@@ -99,7 +97,8 @@ class Rectangle:
         return count
 
     def __repr__(self):
-        """Generate a string representation of the rectangle for debugging.
+        """
+        Return a string representation of the rectangle for debugging.
 
         Returns:
             str: A string representation of the rectangle object.
@@ -107,11 +106,8 @@ class Rectangle:
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
-        """Destructor method to print a farewell message when
-
-        a rectangle instance is deleted.
-
-        This method decreases the number of rectangle instances by 1.
+        """Destructor method to print a farewell message 
+        when a rectangle instance is deleted.
         """
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
