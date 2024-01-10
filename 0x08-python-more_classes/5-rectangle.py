@@ -4,7 +4,6 @@
 
 class Rectangle:
 
-    number_of_instances = 0
 
     """This class represents a rectangle with height and width attributes."""
 
@@ -17,7 +16,6 @@ class Rectangle:
         """
         self.__width = width
         self.__height = height
-        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -112,4 +110,3 @@ class Rectangle:
         when a rectangle instance is deleted.
         """
         print("Bye rectangle...")
-        Rectangle.number_of_instances -= 1
