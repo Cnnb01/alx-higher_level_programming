@@ -89,6 +89,8 @@ class Rectangle:
         Returns:
             str: A string representation of the rectangle.
         """
+        if self.__width == 0 or self.__height == 0:
+            return (" ")
         count = ""
         for i in range(self.__height):
             for j in range(self.__width):
