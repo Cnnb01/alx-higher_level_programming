@@ -82,7 +82,7 @@ class Rectangle:
             int: The perimeter of the rectangle.
         """
         if self.__width == 0 or self.__height == 0:
-            return(0)
+            return (0)
         return (self.__width * 2) + (self.__height * 2)
 
     def __str__(self):
@@ -95,7 +95,7 @@ class Rectangle:
         count = ""
         for i in range(self.__height):
             for j in range(self.__width):
-                count += self.print_symbol
+                count += str(self.print_symbol)
             count += "\n"
         return count
 
