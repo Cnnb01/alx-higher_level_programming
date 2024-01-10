@@ -16,7 +16,6 @@ class Rectangle:
         self.__width = width
         self.__height = height
         Rectangle.number_of_instances += 1
-        self.print_symbol = Rectangle.print_symbol
 
     @property
     def width(self):
@@ -83,7 +82,7 @@ class Rectangle:
             int: The perimeter of the rectangle.
         """
         if self.__width == 0 or self.__height == 0:
-            print()
+            return(0)
         return (self.__width * 2) + (self.__height * 2)
 
     def __str__(self):
