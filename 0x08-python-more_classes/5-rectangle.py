@@ -3,8 +3,6 @@
 
 
 class Rectangle:
-
-
     """This class represents a rectangle with height and width attributes."""
 
     def __init__(self, width=0, height=0):
@@ -106,7 +104,7 @@ class Rectangle:
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
-        """Destructor method to print a farewell message 
+        """Destructor method to print a farewell message
         when a rectangle instance is deleted.
         """
         print("Bye rectangle...")
