@@ -26,8 +26,8 @@ class BaseGeometry:
             TypeError: If the value is not an integer.
             ValueError: If the value is less than or equal to 0.
         """
-        # self.name = name
-        # self.value = value
+        self.name = name
+        self.value = value
         if type(value) is not int:
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
