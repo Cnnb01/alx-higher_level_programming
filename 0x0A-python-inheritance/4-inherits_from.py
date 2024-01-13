@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""The module is 4-inherits_from"""
+
+
 def inherits_from(obj, a_class):
     """
     Check if an object inherits off a specific class.
