@@ -12,9 +12,4 @@ def lookup(obj):
     Returns:
         list: A list containing the names of callable attributes/methods.
     """
-    attribs = dir(obj)
-    myList = []
-    for i in attribs:
-        if callable(getattr(obj, i)):
-            myList.append(i)
-    return myList
+    return dir(obj)
