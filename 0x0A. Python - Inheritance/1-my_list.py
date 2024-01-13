@@ -4,13 +4,13 @@
 
 class MyList(list):
     """
-    Customized list class, derived from the built-in list class.
+    Customized list class, derived off the built-in list class.
 
     Methods:
         print_sorted(): Print the elements of the list in sorted order.
 
     Attributes:
-        Inherits all attributes from the built-in list class.
+        Inherits all attributes off the built-in list class.
 
     Usage Example:
         my_list = MyList([3, 1, 4, 1, 5, 9, 2])
