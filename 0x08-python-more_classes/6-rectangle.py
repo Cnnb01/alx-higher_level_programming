@@ -109,5 +109,5 @@ class Rectangle:
         """Destructor method to print a farewell message
         when a rectangle instance is deleted.
         """
-        print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
