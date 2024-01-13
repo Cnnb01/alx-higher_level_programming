@@ -95,14 +95,21 @@ class Rectangle:
         Returns:
             str: The string representation of the rectangle.
         """
-        if self.__width == 0 or self.__height == 0:
-            return ""
-        count = ""
-        for i in range(self.__height):
-            for j in range(self.__width):
-                count += str(self.print_symbol)
-            count += "\n"
-        return count
+        rectangle = ""
+
+        if self.__width > 0 and self.__height > 0:
+            for y in range(self.__height):
+                rectangle += str(self.print_symbol) * self.__width + '\n'
+
+        return rectangle[:-1]
+        # if self.__width == 0 or self.__height == 0:
+        #     return ""
+        # count = ""
+        # for i in range(self.__height):
+        #     for j in range(self.__width):
+        #         count += str(self.print_symbol)
+        #     count += "\n"
+        # return count
 
     def __repr__(self):
         """
@@ -118,5 +125,6 @@ class Rectangle:
         Destructor method to print a farewell message
         when a rectangle instance is deleted.
         """
-        print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
+        
