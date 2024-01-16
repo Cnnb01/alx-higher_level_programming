@@ -42,4 +42,4 @@ def write_file(filename="", text=""):
         for line in f:
             for char in line:
                 charcount += 1
-        print(charcount)
+    return charcount
