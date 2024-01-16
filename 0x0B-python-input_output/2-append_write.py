@@ -16,7 +16,7 @@ Modules:
     None
 
 Raises:
-    FileNotFoundError: If the specified file does not exist.
+    None
 
 Note:
     The function does not handle file permission exceptions.
@@ -33,9 +33,6 @@ def append_write(filename="", text=""):
     Args:
         filename (str): The name of the file.
         text (str): The text to append.
-
-    Raises:
-        FileNotFoundError: If the specified file does not exist.
     """
     with open(filename, mode='a', encoding="utf-8") as f:
         f.write(text)
@@ -45,4 +42,4 @@ def append_write(filename="", text=""):
         for line in f:
             for char in line:
                 charcount += 1
-        print(charcount)
+    return (charcount)
