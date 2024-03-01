@@ -8,3 +8,4 @@ def matrix_divided(matrix, div):
                 return matrix[i] / div
             raise TypeError("div must be a number")
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+    
