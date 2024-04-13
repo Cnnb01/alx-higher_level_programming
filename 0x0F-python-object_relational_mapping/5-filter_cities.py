@@ -15,11 +15,12 @@ if __name__ == "__main__":
     #creating  a cursor object
     mycurs = mydb.cursor()
     #executing queries using the cursor object
-    mycurs.execute("SELECT cities.id, cities.name, states.name FROM cities JOIN states WHERE states.name =%s AND states.id = cities.state_id  ORDER BY cities.id ASC;",(argv[4],))
+    mycurs.execute("SELECT cities.name FROM cities JOIN states WHERE states.name =%s AND states.id = cities.state_id  ORDER BY cities.id ASC;",(argv[4],))
     #collects all the results
     myrows = mycurs.fetchall()
-    for i in myrows:
-        print (i)
+    print (myrows)
+    #for i in myrows:
+        #print (i)
     #close cursor and db
     mycurs.close()
     mydb.close()
