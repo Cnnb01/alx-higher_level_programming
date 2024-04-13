@@ -16,7 +16,7 @@ if __name__ == "__main__":
     #creating  a cursor object
     mycurs = mydb.cursor()
     #executing queries using the cursor object
-    mycurs.execute("SELECT * FROM states WHERE states.name = {} ORDER BY states.id ASC;".format(argv[4]))
+    mycurs.execute("SELECT * FROM states WHERE states.name = '{}' ORDER BY states.id ASC;".format(argv[4]))
     #collects all the results
     myrows = mycurs.fetchall()
     for i in myrows:
