@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-a script that lists all states from the database hbtn_0e_0_usa
+a script that lists all cities from the database hbtn_0e_4_usa
 """
 
 if __name__ == "__main__":
@@ -14,7 +14,7 @@ if __name__ == "__main__":
     #creating  a cursor object
     mycurs = mydb.cursor()
     #executing queries using the cursor object
-    mycurs.execute("SELECT * FROM states ORDER BY states.id ASC;")
+    mycurs.execute("SELECT cities.id, cities.name, states.name FROM cities JOIN states WHERE states.id = cities.state_id ORDER BY cities.id ASC;")
     #collects all the results
     myrows = mycurs.fetchall()
     for i in myrows:
