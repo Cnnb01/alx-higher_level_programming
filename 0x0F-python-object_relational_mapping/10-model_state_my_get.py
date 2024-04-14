@@ -14,7 +14,8 @@ if __name__ == "__main__":
         'mysql+mysqldb://{}:{}@localhost/{}'
         .format(argv[1], argv[2], argv[3]),
         pool_pre_ping=True)
-    my_session = sessionmaker(bind=engine)
+    my_sessionn = sessionmaker(bind=engine)
+    my_session = my_sessionn()
     for state in my_session.query(State):
         if argv[4] == state.name:
             print("{}".format(state.id))
