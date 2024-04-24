@@ -1,5 +1,6 @@
 #!/usr/bin/node
 
+// import built-in module "process"
 const process = require('process');
 
 const valueArgs = process.argv;
