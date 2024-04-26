@@ -12,9 +12,9 @@ if __name__ == "__main__":
     url = sys.argv[1]
     email = sys.argv[2]
 
-    data = parse.urlencode(email)
-    data_enc = data.encode('ascii')
-    req = request.Request(url, data)
+    data = {'email': email}
+    data_enc = parse.urlencode(data).encode('ascii')
+    req = request.Request(url, data=data_enc)
+
     with request.urlopen(req) as response:
-        tab = response.read()
-        print(tab.decode('utf8'))
+        print(response.read().decode('utf8'))
