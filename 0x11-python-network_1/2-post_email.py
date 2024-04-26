@@ -7,10 +7,11 @@ as a parameter, and displays the body of the response
 from urllib import request
 from urllib import parse
 import sys
-url = sys.argv[1]
-email = sys.argv[2]
 
 if __name__ == "__main__":
+    url = sys.argv[1]
+    email = sys.argv[2]
+
     data = parse.urlencode(email)
     data = data.encode('ascii')
     req = request.Request(url, data)
